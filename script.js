@@ -20,6 +20,11 @@ async function checkWeather(city){
     {
         let finalURL= URL+`&appid=${APIkey}&q=${city}`
         const response= await fetch(finalURL);
+        if(response.status=== 404)
+        {
+            document.querySelector(".error").style.display="block";
+            document.querySelector(".weather").style.display="none";
+        }
         let data= await response.json();
         updateValue(data);
     }
@@ -56,6 +61,6 @@ function updateValue(data){
     else{
         img.src= "./images/clear.png";
     }
-
+    document.querySelector(".error").style.display="none";
     document.querySelector(".weather").style.display="block";
 }

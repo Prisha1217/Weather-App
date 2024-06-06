@@ -16,7 +16,7 @@ body{
 .card{
     width:33%;
     box-sizing: border-box;
-    margin:30px auto 0px auto;
+    margin:60px auto 0px auto;
     text-align: center;
     background-color: rgb(63, 171, 185);
     padding:40px ;
@@ -55,6 +55,15 @@ body{
 img{
     width:18px;
     height:18px;
+}
+
+
+.error{
+    color:white;
+    margin-top: 16px;
+    margin-left: 30px;
+    text-align: left;
+    display: none;
 }
 
 .weather-icon{
